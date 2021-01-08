@@ -36,7 +36,8 @@ public class input_output{
 	// BufferedWriter : write 한다고 바로 출력되지 않음(flush or close 될 때 한번에 출력 stream에 반영)
 	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	bw.write("Buffered Writer!\n");
-	bw.flush();	
+	bw.flush();		// 버퍼가 가득차지 않았지만 강제로 버퍼의 내용 전송, 비움
+	bw.write("flush!");
 	bw.newLine();	// 줄바꿈
 	bw.close();		// 버퍼 닫기
 	

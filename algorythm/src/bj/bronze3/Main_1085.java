@@ -16,6 +16,7 @@ public class Main_1085 {
 		int ck1 = x<w-x?x:w-x;
 		int ck2 = y<h-y?y:h-y;
 		int result = ck1<ck2?ck1:ck2;
+		
 		System.out.println(result);
 	}
 }

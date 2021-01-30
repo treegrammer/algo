@@ -16,10 +16,14 @@ public class Search_Binary {
 		// left = mid+1 = 5(6) / right = 9(10)
 		// 반복
 		int num = nums[nums.length / 2];
-		int find = 1;
+		int find = 10;
 		int left = 0;
 		int right = nums.length - 1;
 		while(num != find) {
+			if(left > right) {
+				num = -1;
+				break;
+			}
 			int mid = (left + right)/2;
 			num = nums[mid];
 			if(num < find) {
@@ -27,6 +31,11 @@ public class Search_Binary {
 			}
 			if(num > find) {
 				right = num-1;
+			}
+			if(num == find) {
+				// 찾았다!!
+				num = 1;
+				break;
 			}
 		}
 		

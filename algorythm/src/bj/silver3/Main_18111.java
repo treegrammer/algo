@@ -63,5 +63,6 @@ public class Main_18111 {
 
 		bw.write(result + " " + max + "\n");
 		bw.flush();
+		
 	}
 }
